@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+</head>
+<body>
+    <div>
+        <h3>Reservation Ordering Form</h3>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.RoomId" name="RoomId" />
+            <table>
+                <tr>
+                    <td><p>Enter Your Name </p></td>
+                    <td><input type="text" name="Client" /> </td>
+                </tr>
+         <!--   <tr>
+                    <td><p>Enter Your SecondName </p></td>
+                    <td><input type="text" name="Client" /> </td>
+                </tr>
+            -->
+                <tr>
+                    <td><p>Enter Start Time :</p></td>
+                    <td>
+                        <input type="text" name="DateTimeOfStart" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Enter End Time :</p></td>
+                    <td>
+                        <input type="text" name="DateTimeOfFinish" />
+                    </td>
+                </tr>
+                <tr><td><input type="submit" value="Confirm Reservation" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

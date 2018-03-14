@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+</head>
+<body>
+    <div>
+        <h3>Room List</h3>
+        <table>
+            <tr>
+                <td><p>Room Number</p></td>
+                <td><p>Room Status</p></td>
+                <td></td>
+            </tr>
+            @foreach (var r in ViewBag.Room)
+            {
+                <tr>
+                    <td><p>@r.RoomNumber</p></td>
+                    <td><p>@r.Status</p></td>
+                    @if (r.Status == true)
+                    {
+                    <td><p><a href="/Home/Reserve/@r.RoomId">Reservate</a></p></td>
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
