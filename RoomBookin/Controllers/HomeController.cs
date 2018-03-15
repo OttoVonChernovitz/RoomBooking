@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using RoomBookin.Models;
+using RoomBookin.TimeProcessing;
 
 namespace BookStore.Controllers
 {
